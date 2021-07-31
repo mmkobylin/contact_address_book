@@ -1,11 +1,11 @@
 @extends("app")
 
-    @section("title"){{
-        "Contacts"
-    }}@endsection
+    {{-- in section - we are naming section, and second varialbe is an actual name --}}
+    @section("title", "Contacts Book")
 
     {{-- pulls content from the partials --}}
     @section("content")
+        @include ("partials/nav")
         @include ("partials/main")
         @include("partials/list")
     @endsection
