@@ -1,6 +1,6 @@
 # Contact address book
 
-The task is to develop a simple contact address book. 
+The task is to develop a simple git branch -M main. 
 
 ## Technology
 PHP, HTML, CSS, JavaScript, and MySQL.
