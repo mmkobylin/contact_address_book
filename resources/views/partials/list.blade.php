@@ -1,5 +1,5 @@
 {{-- catching no contacts --}}
-{{-- @if (count($contacts) === 0 )
+@if (count($contacts) === 0 )
     <p>No contacts found</p>
 @else 
     @foreach($contacts as $contact)
@@ -10,4 +10,4 @@
         </a>
     </div>
     @endforeach 
-@endif --}}
+@endif
