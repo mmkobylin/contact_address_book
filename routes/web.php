@@ -23,7 +23,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/contacts', function () {
+    return view('list');
+});
 
-// Route::get('/list', function () {
-//     return view('main');
-// });
+Route::get('/form', function () {
+    return view('form');
+});

@@ -19,7 +19,7 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('salutation', 10);
+            $table->string('salutation', 20);
             $table->string('first_name', 20);
             $table->string('middle_name', 20)->nullable();
             $table->string('last_name', 20);

@@ -1,10 +1,10 @@
 @extends("app")
 
     {{-- in section - we are naming section, and second varialbe is an actual name --}}
-    @section("title", "Contacts Book")
+    @section("title", "Add Contact")
 
     {{-- pulls content from the partials --}}
     @section("content")
-        @include ("partials/main")
+        @include ("partials/form")
         {{-- @include("partials/list") --}}
     @endsection
