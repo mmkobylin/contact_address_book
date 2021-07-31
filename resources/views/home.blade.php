@@ -5,7 +5,6 @@
 
     {{-- pulls content from the partials --}}
     @section("content")
-        @include ("partials/nav")
         @include ("partials/main")
         @include("partials/list")
     @endsection

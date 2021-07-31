@@ -89,6 +89,7 @@
                 @yield("title")
             </h1>
             @yield("content")
+            @include("partials/nav")
         </main>
 
 
