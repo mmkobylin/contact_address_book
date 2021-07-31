@@ -30,7 +30,6 @@ class CreateContactsTable extends Migration
             $table->string('tel', 11);
             $table->string('email',30)->unique();
             $table->timestamps();
-            
         });
     }
 
