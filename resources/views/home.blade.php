@@ -1,8 +1,8 @@
 @extends("app")
 
-    {{-- @section("title"){{
+    @section("title"){{
         "Contacts"
-    }}@endsection --}}
+    }}@endsection
 
     {{-- pulls content from the partials --}}
     @section("content")

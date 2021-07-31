@@ -2,8 +2,7 @@
 
 <!doctype html>
     <html class="no-js" lang="en">
-
-        <h1>Contact address book</h1>
+    {{-- regular html --}}
         <p>To add, go to the FORM section</p>
     
 </html>

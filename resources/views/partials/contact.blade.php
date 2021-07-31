@@ -1,5 +1,5 @@
 {{-- it is pulling info from main --}}
-@extends('main')
+@extends('app')
 
 @section('title')
     <h1>Contacts</h1>
