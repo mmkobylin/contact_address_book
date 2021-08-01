@@ -18,6 +18,8 @@
                 <td>Address</td>
                 <td>Email</td>
                 <td>Phone</td>
+                <td>Edit</td>
+                <td>Delete</td>
             </tr>
             @foreach($contacts as $contact)
             <tr>
@@ -27,6 +29,9 @@
                 <td>{{$contact->fullAddress()}}</td>
                 <td>{{$contact->email}}</td>
                 <td>{{$contact->tel}}</td>
+                <td>edit</td>
+                <td><a href={{"delete/".$contact['id']}}>DELETE</a></td>
+
             </tr>
             @endforeach
         </table> 

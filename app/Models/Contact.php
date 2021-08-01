@@ -18,5 +18,6 @@ class Contact extends Model
     {
         return "{$this->address} {$this->city} {$this->postcode}";
     }
+
     
 }
