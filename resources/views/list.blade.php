@@ -29,7 +29,7 @@
                 <td>{{$contact->fullAddress()}}</td>
                 <td>{{$contact->email}}</td>
                 <td>{{$contact->tel}}</td>
-                <td>edit</td>
+                <td><a href={{"edit/".$contact['id']}}>Edit</a></td>
                 <td><a href={{"delete/".$contact['id']}}>DELETE</a></td>
 
             </tr>
