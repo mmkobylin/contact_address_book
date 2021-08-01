@@ -5,27 +5,31 @@
 
 {{-- pulls content from the partials --}}
 @section("content")
-    <table border='1'>
-        <tr>
-            <td>Id</td>
-            <td>Email</td>
-            <td>Name</td>
-            <td>Address</td>
-        </tr>
-    </table>
 
     @if (count($contacts) === 0 )
     <p>No contacts found</p>
+
     @else 
-        @foreach($contacts as $contact)
-        <div class="list-group">
-            <a href="/contacts/{{ $contact->id}}"></a>
-            <h5>{{$contact->fullName()}}</h5>
-            <p>{{$contact->fullAddress()}}</p>
-            <p>{{$contact->email}}</p>
-            <p>{{$contact->tel}}</p>
-        </div>
-        @endforeach 
+        <table border='1'>
+            <tr>
+                <td>ID</td>
+                <td>Salutation</td>
+                <td>Name</td>
+                <td>Address</td>
+                <td>Email</td>
+                <td>Phone</td>
+            </tr>
+            @foreach($contacts as $contact)
+            <tr>
+                <td>{{$contact->id}}</td>
+                <td>{{$contact->salutation}}</td>
+                <td>{{$contact->fullName()}}</td>
+                <td>{{$contact->fullAddress()}}</td>
+                <td>{{$contact->email}}</td>
+                <td>{{$contact->tel}}</td>
+            </tr>
+            @endforeach
+        </table> 
     @endif
 
 

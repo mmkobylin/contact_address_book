@@ -11,7 +11,7 @@ class Contact extends Model
 
     public function fullName()
     {
-        return "{$this->salutation} $this->first_name} {$this->middle_name} {$this->last_name}";
+        return "{$this->first_name} {$this->middle_name} {$this->last_name}";
     }
 
     public function fullAddress() 
