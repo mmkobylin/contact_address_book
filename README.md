@@ -7,9 +7,9 @@ PHP, HTML, CSS, JavaScript, and MySQL.
 
 ## Requirements:
 
-1. A webpage with the ability to add, edit, deactivate contacts
+1. A webpage with the ability to add, edit, deactivate contacts x
 
-2. A webpage that allows you to view a list of records
+2. A webpage that allows you to view a list of records x 
 
 3. Basic form validation (For example, email has to be in a correct format, DOB in a date format etc.)
 

@@ -5,7 +5,7 @@
 <div class="">
     <ul>
         <li> <a class="navbar-brand" href="/list">View Contacts</a></li>
-        <li> <a class="navbar-brand" href="/modify">Modify Contacts</a></li>
+        <li> <a class="navbar-brand" href="/modify">Add/Modify Contacts</a></li>
         <li> <a class="navbar-brand" href="/home">Home</a></li>
     </ul>
 </div>

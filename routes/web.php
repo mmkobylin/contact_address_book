@@ -33,6 +33,11 @@ Route::get('/form', function () {
 
 Route::get('list', [Contacts::class, 'show']);
 
+// with view : 1st is address, second is blade ) 
+Route::view('add', 'form');
+
+Route::post('add', [Contacts::class, 'create']);
+
 Route::get('delete/{id}', [Contacts::class, 'destroy']);
 
 Route::get('edit/{id}', [Contacts::class, 'showContact']);
