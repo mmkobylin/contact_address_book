@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     use HasFactory;
+
+    public function fullName()
+    {
+        return "{$this->salutation} $this->first_name} {$this->middle_name} {$this->last_name}";
+    }
+
+    public function fullAddress() 
+    {
+        return "{$this->address} {$this->city} {$this->postcode}";
+    }
+    
 }

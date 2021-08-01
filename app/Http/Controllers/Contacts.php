@@ -11,6 +11,6 @@ class Contacts extends Controller
     function show()
     {
         $data = Contact::all();
-        return $data;
+        return view('list', ['contacts'=>$data]);
     }
 }
