@@ -33,4 +33,4 @@ Route::get('/form', function () {
 
 Route::get('list', [Contacts::class, 'show']);
 
-Route::get('delete', [Contacts::class, 'destroy']);
+Route::get('delete/{id}', [Contacts::class, 'delete']);

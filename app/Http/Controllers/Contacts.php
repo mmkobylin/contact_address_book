@@ -14,9 +14,10 @@ class Contacts extends Controller
         return view ( 'list', ['contacts' => $data ] );
     }
 
-    public function destroy(Contact $contact)
+    function delete($id)
     {
-        $contact->delete();
-        return response(null, 204);
+        $data = Contact::find($id);
+        $data->delete();
+        return view('list');
     }
 }

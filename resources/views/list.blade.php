@@ -6,7 +6,7 @@
 {{-- pulls content from the partials --}}
 @section("content")
 
-    @if (count($contacts) === 0 )
+    @if (!is_countable($contacts ?? '') || count($contacts ?? '') === 0 )
     <p>No contacts found</p>
 
     @else 
@@ -21,7 +21,7 @@
                 <td>Edit</td>
                 <td>Delete</td>
             </tr>
-            @foreach($contacts as $contact)
+            @foreach($contacts ?? '' as $contact)
             <tr>
                 <td>{{$contact->id}}</td>
                 <td>{{$contact->salutation}}</td>
@@ -30,7 +30,7 @@
                 <td>{{$contact->email}}</td>
                 <td>{{$contact->tel}}</td>
                 <td><a href={{"edit/".$contact['id']}}>Edit</a></td>
-                <td><a href={{"delete/".$contact['id']}}>DELETE</a></td>
+                <td><a href={{"delete/".$contact['id']}}>Delete</a></td>
 
             </tr>
             @endforeach
