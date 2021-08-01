@@ -1,6 +1,9 @@
 {{-- action is where we are moving --}}
 <form action="/edit" method="POST">
 
+    @csrf
+
+    <input type="hidden" name = "id" value = {{ $data['id']}}>
     <input type="text" value = "{{ $data['salutations']}} " name="salutations">
     <input type="text" value = "{{ $data['first_name']}} " name="first_name">
     <input type="text" value = "{{ $data['middle_name']}} " name="middle_name">

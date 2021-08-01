@@ -27,9 +27,8 @@ class Contacts extends Controller
         return view('edit', ['data'=>$data]);
     }
 
-    function modify($id)
+    function modify(Request $request)
     {
-        $data = Contact::find($id);
-        return view('edit', ['data'=>$data]);
+        return $request->input();
     }
 }
