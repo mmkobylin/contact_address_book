@@ -29,6 +29,19 @@ class Contacts extends Controller
 
     function modify(Request $request)
     {
-        return $request->input();
+        $data = Contact::find($request->id);
+        $data->salutation=$request->salutation;
+        $data->first_name=$request->first_name;
+        $data->middle_name=$request->middle_name;
+        $data->last_name=$request->last_name;
+        $data->date_of_birth=$request->date_of_birth;
+        $data->address=$request->address;
+        $data->city=$request->city;
+        $data->postcode=$request->postcode;
+        $data->tel=$request->tel;
+        $data->email=$request->email;
+        $data->save();
+    
+        return redirect('list');
     }
 }
