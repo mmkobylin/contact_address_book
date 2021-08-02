@@ -33,12 +33,19 @@
                 <td>{{$contact->active}}</td>
                 <td><a href={{"edit/".$contact['id']}}>Edit</a></td>
 
-                //{{$contact->active}} ? 
+                <td>
+                    @if ($contact->active) 
+                    
+                    <a href={{"deactive/".$contact['id']}}>Deactivate</a></td>
+                    
+                    @else
+                    
+                    <a href={{"active/".$contact['id']}}>Activate</a>
+                    
+                    @endif
+                </td>
+
                 
-                <td><a href={{"active/".$contact['id']}}>Active</a></td>
-
-                <td><a href={{"deactive/".$contact['id']}}>Deactivate</a></td>
-
             </tr>
             @endforeach
         </table> 
