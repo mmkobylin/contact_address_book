@@ -14,7 +14,7 @@ class Contacts extends Controller
         return view ( 'list', ['contacts' => $data ] );
     }
 
-    public function active(Request $request, $id)
+    public function deactive(Request $request, $id)
     {
         $data = Contact::find($id);        
 
@@ -24,6 +24,18 @@ class Contacts extends Controller
 
         return view('success');
     }
+
+    public function active(Request $request, $id)
+    {
+        $data = Contact::find($id);        
+
+        $data->active = true;
+        
+        $data->save();
+
+        return view('success');
+    }
+
 
     function showContact($id)
     {
