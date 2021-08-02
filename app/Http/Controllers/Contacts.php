@@ -18,7 +18,7 @@ class Contacts extends Controller
     {
         $data = Contact::find($id);
         $data->delete();
-        return view('list');
+        return view('success');
     }
 
     function showContact($id)
@@ -42,7 +42,7 @@ class Contacts extends Controller
         $contact->email=$request->email;
         $contact->save();
         
-        return view('list');
+        return view('success');
     }
 
     function modify(Request $request)
@@ -60,7 +60,7 @@ class Contacts extends Controller
         $data->email=$request->email;
         $data->save();
     
-        return redirect('list');
+        return view('success');
     }
 
 }
