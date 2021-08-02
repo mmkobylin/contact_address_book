@@ -1,5 +1,7 @@
 {{-- action is where we are moving --}}
-<form action="/add" method="POST">
+<form method="POST"action="<?php 
+    echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
+>
 
     @csrf
     <label>Salutation</label>

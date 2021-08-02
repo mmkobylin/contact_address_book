@@ -33,4 +33,6 @@ Route::get('delete/{id}', [Contacts::class, 'destroy']);
 
 Route::get('edit/{id}', [Contacts::class, 'showContact']);
 
+Route::get('edit', [Contacts::class, 'show']);
+
 Route::post('edit', [Contacts::class, 'modify']);
