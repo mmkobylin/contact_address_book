@@ -39,12 +39,11 @@
                     <a href={{"deactive/".$contact['id']}}>Deactivate</a></td>
                     
                     @else
-                    
+
                     <a href={{"active/".$contact['id']}}>Activate</a>
                     
                     @endif
                 </td>
-
                 
             </tr>
             @endforeach
