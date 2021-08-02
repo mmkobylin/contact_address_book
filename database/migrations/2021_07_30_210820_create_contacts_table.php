@@ -19,16 +19,18 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->string('salutation', 20);
+            $table->string('salutation', 20)->default('Miss');
             $table->string('first_name', 20);
             $table->string('middle_name', 20)->nullable();
             $table->string('last_name', 20);
-            $table->date('date_of_birth');
+            $table->date('date_of_birth')->nullable();
             $table->string('address', 50);
             $table->string('city', 30);
             $table->string('postcode', 10);
-            $table->string('tel', 11);
+            $table->string('tel', 11)->nullable();
             $table->string('email',30)->unique();
+            // boolean renders automatically true
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

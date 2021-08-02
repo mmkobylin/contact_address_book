@@ -21,7 +21,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-
 Route::get('list', [Contacts::class, 'show']);
 
 // with view : 1st is address, second is blade ) 
