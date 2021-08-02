@@ -39,8 +39,7 @@ class Contacts extends Controller
 
     function showContact($id)
     {
-        $data = Contact::find($id);
-        $data->save();
+        $data = Contact::all();
         return view('edit', ['data'=>$data]);
     }
 
@@ -58,7 +57,6 @@ class Contacts extends Controller
         $data->tel=$request->tel;
         $data->email=$request->email;
         $data->save();
-        
         return view('success');
     }
 

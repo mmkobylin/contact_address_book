@@ -20,7 +20,7 @@
                 <td>Phone</td>
                 <td>Active</td>
                 <td>Edit</td>
-                <td>Delete</td>
+                <td>Change Status</td>
             </tr>
             @foreach($contacts ?? '' as $contact)
             <tr>
