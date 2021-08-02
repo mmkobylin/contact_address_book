@@ -18,6 +18,7 @@
                 <td>Address</td>
                 <td>Email</td>
                 <td>Phone</td>
+                <td>Active</td>
                 <td>Edit</td>
                 <td>Delete</td>
             </tr>
@@ -29,8 +30,9 @@
                 <td>{{$contact->fullAddress()}}</td>
                 <td>{{$contact->email}}</td>
                 <td>{{$contact->tel}}</td>
+                <td>{{$contact->active}}</td>
                 <td><a href={{"edit/".$contact['id']}}>Edit</a></td>
-                <td><a href={{"delete/".$contact['id']}}>Delete</a></td>
+                <td><a href={{"delete/".$contact['id']}}>Deactivate</a></td>
 
             </tr>
             @endforeach

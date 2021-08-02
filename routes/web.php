@@ -29,7 +29,7 @@ Route::view('add', 'form');
 
 Route::post('add', [Contacts::class, 'create']);
 
-Route::get('delete/{id}', [Contacts::class, 'destroy']);
+Route::get('delete/{id}', [Contacts::class, 'active']);
 
 Route::get('edit/{id}', [Contacts::class, 'showContact']);
 

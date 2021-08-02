@@ -14,16 +14,21 @@ class Contacts extends Controller
         return view ( 'list', ['contacts' => $data ] );
     }
 
-    function destroy($id)
+    public function active(Request $request, $id)
     {
-        $data = Contact::find($id);
-        $data->delete();
+        $data = Contact::find($id);        
+
+        $data->active = false;
+        
+        $data->save();
+
         return view('success');
     }
 
     function showContact($id)
     {
         $data = Contact::find($id);
+        $data->save();
         return view('edit', ['data'=>$data]);
     }
 

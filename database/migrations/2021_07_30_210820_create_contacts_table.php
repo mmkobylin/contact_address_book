@@ -29,7 +29,7 @@ class CreateContactsTable extends Migration
             $table->string('postcode', 10);
             $table->string('tel', 11)->nullable();
             $table->string('email',30)->unique();
-            $table->boolean('active')->default(true);
+            $table->boolean('active')->default(true)->nullable();
             $table->timestamps();
         });
     }
