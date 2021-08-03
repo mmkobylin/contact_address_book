@@ -43,21 +43,21 @@ class Contacts extends Controller
         return view('edit', ['data'=>$data]);
     }
 
-    function create(Request $request)
+    public function store(Request $request)
     {
-        $data = new Contact;
-        $data->salutation=$request->salutation;
-        $data->first_name=$request->first_name;
-        $data->middle_name=$request->middle_name;
-        $data->last_name=$request->last_name;
-        $data->date_of_birth=$request->date_of_birth;
-        $data->address=$request->address;
-        $data->city=$request->city;
-        $data->postcode=$request->postcode;
-        $data->tel=$request->tel;
-        $data->email=$request->email;
-        $data->save();
-        return view('success');
+        $this->validate($request, [
+        'salutation' => 'required|string',
+        'first_name'=> 'required|string',
+        'middle_name'=> 'required|string',
+        'last_name'=> 'required|string',
+        'date_of_birth',
+        'address'=> 'required|string', 
+        'city'=> 'required|string',
+        'postcode' => 'required',
+        'tel' => 'max:11', 
+        'email'=> 'required|string' 
+        ]); 
+        
     }
 
     function modify(Request $request)
