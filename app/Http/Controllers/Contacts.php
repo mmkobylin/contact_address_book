@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
-
+use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
 
 class Contacts extends Controller
@@ -34,26 +34,35 @@ class Contacts extends Controller
 
     public function createContact(Request $request)
     {
-        $request-> validate([
-            'salutation' => 'required' | 'max:20', 
-            'first_name' => 'required' | 'max:30', 
+        $request->validate([
+            'salutation' => 'required | max:20', 
+            'first_name' => 'required | max:30', 
             'middle_name' => 'max:30', 
-            'last_name' => 'required' | 'max:30', 
+            'last_name' => 'required | max:30', 
             'date_of_birth',
-            'address' => 'required' | 'max:50', 
-            'city' => 'required' | 'max:30', 
-            'postcode' => 'required' | 'max:10', 
+            'address' => 'required | max:50', 
+            'city' => 'required | max:30', 
+            'postcode' => 'required | max:10', 
             'tel' => 'max:11', 
-            'email' => 'required' | 'max:20', 
-        ])
+            'email' => 'required | max:20', 
+        ]);
 
         // get all of the submitted data
-        $contact = Contact::create([
-            
-        ])
+        $data = Contact::create([
+        'salutation' => $request->input('salutation'),
+        'first_name' => $request->input('first_name'),
+        'middle_name' => $request->input('middle_name'),
+        'last_name' => $request->input('last_name'),
+        'date_of_birth' => $request->input('date_of_birth'),
+        'address' => $request->input('address'),
+        'city' => $request->input('city'),
+        'postcode' => $request->input('postcode'),
+        'tel' => $request->input('tel'),
+        'email' => $request->input('email')
+        ]);
+
         return redirect("/");
     }
-
 
     function store(Request $request)
     {
