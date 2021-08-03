@@ -27,7 +27,23 @@ class Contacts extends Controller
         return view('edit', ['data'=>$data]);
     }
 
-    function create(Request $request)
+    public function create()
+    {
+    return view("form");
+    }
+
+    public function createContact(Request $request)
+    {
+        // get all of the submitted data
+        $data = $request->all();
+        // create a new contact, passing in the submitted data
+        $contact = Contact::create($data);
+        // redirect the browser to home
+        return redirect("/");
+    }
+
+
+    function store(Request $request)
     {
         $contact = new Contact;
         $contact->salutation=$request->salutation;

@@ -21,16 +21,14 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/list', [Contacts::class, 'show']);
 
-Route::get('list', [Contacts::class, 'show']);
+Route::get('/add', [Contacts::class, 'create']);
 
-// with view : 1st is address, second is blade ) 
-Route::view('add', 'form');
+Route::post('/add', [Contacts::class, 'createContact']);
 
-Route::post('add', [Contacts::class, 'create']);
+Route::get('/delete/{id}', [Contacts::class, 'destroy']);
 
-Route::get('delete/{id}', [Contacts::class, 'destroy']);
+Route::get('/edit/{id}', [Contacts::class, 'showContact']);
 
-Route::get('edit/{id}', [Contacts::class, 'showContact']);
-
-Route::post('edit', [Contacts::class, 'modify']);
+Route::post('/edit', [Contacts::class, 'modify']);
