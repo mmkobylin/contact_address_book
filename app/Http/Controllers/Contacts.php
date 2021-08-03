@@ -48,10 +48,9 @@ class Contacts extends Controller
         ])
 
         // get all of the submitted data
-        $data = $request->all();
-        // create a new contact, passing in the submitted data
-        $contact = Contact::create($data);
-        // redirect the browser to home
+        $contact = Contact::create([
+            
+        ])
         return redirect("/");
     }
 
