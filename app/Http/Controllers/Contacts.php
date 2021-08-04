@@ -37,6 +37,17 @@ class Contacts extends Controller
         return view('success');
     }
 
+    public function activate(Request $request, $id)
+    {
+        $data = Contact::find($id);        
+
+        $data->active = true;
+        
+        $data->save();
+
+        return view('success');
+    }
+    
     public function showContact($id)
     {
         $data = Contact::find($id);

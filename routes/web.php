@@ -27,7 +27,10 @@ Route::get('/add', [Contacts::class, 'create']);
 
 Route::post('/add', [Contacts::class, 'createContact']);
 
-Route::get('/delete/{id}', [Contacts::class, 'deactivate']);
+// 1st part if route, second array: class and the method used;
+Route::get('/active/{id}', [Contacts::class, 'activate']);
+
+Route::get('/deactive/{id}', [Contacts::class, 'deactivate']);
 
 // pick up the id of the Contact and change it;
 Route::get('/edit/{id}', [Contacts::class, 'showContact']);

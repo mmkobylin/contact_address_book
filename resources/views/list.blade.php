@@ -30,8 +30,17 @@
                 <td>{{$contact->email}}</td>
                 <td>{{$contact->tel}}</td>
                 <td><a href={{"edit/".$contact['id']}}>Edit</a></td>
-                <td><a href={{"delete/".$contact['id']}}>Deactivate</a></td>
+                <td>
+                    @if ($contact->active) 
+                    
+                    <a href={{"deactive/".$contact['id']}}>Deactivate</a></td>
+                    
+                    @else
 
+                    <a href={{"active/".$contact['id']}}>Activate</a>
+                    
+                    @endif
+                </td>
             </tr>
             @endforeach
         </table> 
