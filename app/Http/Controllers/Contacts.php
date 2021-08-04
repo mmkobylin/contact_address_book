@@ -61,6 +61,19 @@ class Contacts extends Controller
 
     public function createContact(Request $request)
     {
+
+        $request->validate([
+            'salutation' => 'required | max:20',
+            'first_name' => 'required | max:20',
+            'middle_name' => 'max:20',
+            'last_name' => 'required | max:20',
+            'address' => 'max:50',
+            'city' => 'required | max:20',
+            'postcode' => 'required | max:20',
+            'email' => 'required | max:20'
+        ]);
+
+
         $data = Contact::create([
             'salutation' => $request->input('salutation'),
             'first_name' => $request->input('first_name'),

@@ -1,4 +1,6 @@
 {{-- action is where we are moving --}}
+
+
 <form method="POST" action="add">
 
     @csrf
@@ -96,14 +98,3 @@
     <button type = "submit" >Add Contact</button>
 </form>
 
-@if ( $errors->any()) 
-    <div>
-        @foreach ($errors->all() as $error) 
-
-            <li>
-                {{ $error }}
-            </li>
-            
-        @endforeach
-    </div>
-@endif
