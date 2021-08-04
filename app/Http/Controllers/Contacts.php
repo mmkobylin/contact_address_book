@@ -22,10 +22,18 @@ class Contacts extends Controller
         return view ( 'list', ['contacts' => $data ] );
     }
 
-    public function deactivate($id)
+    public function deactivate(Request $request, $id)
     {
-        $data = Contact::find($id);
-        $data->id('active', false);
+        // find data
+        $data = Contact::find($id);        
+
+        // change to false
+        $data->active = false;
+        
+        // save it
+        $data->save();
+
+        //return it
         return view('list');
     }
 
