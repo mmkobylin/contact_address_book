@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class Contacts extends Controller
 {
-    public function show()
+    public function showAll()
     {
         $data = Contact::all();
         return view ( 'list', ['contacts' => $data ] );
@@ -34,7 +34,7 @@ class Contacts extends Controller
         $data->save();
 
         //return it
-        return view('list');
+        return view('success');
     }
 
     public function showContact($id)
@@ -45,7 +45,7 @@ class Contacts extends Controller
 
     public function create()
     {
-    return view("form");
+        return view("form");
     }
 
     public function createContact(Request $request)
@@ -77,7 +77,7 @@ class Contacts extends Controller
         'email' => $request->input('email')
         ]);
 
-        return redirect("/");
+        return view("success");
     }
 
     public function store(Request $request)
@@ -95,7 +95,7 @@ class Contacts extends Controller
         $contact->email=$request->email;
         $contact->save();
         
-        return view('list');
+        return view('success');
     }
 
     public function modify(Request $request)
@@ -113,7 +113,7 @@ class Contacts extends Controller
         $data->email=$request->email;
         $data->save();
     
-        return redirect('list');
+        return view('success');
     }
 
 }

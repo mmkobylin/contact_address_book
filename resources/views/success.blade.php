@@ -1,7 +1,7 @@
 @extends("app")
 
     {{-- in section - we are naming section, and second varialbe is an actual name --}}
-    @section("title", "Action successful")
+    @section("title", "Action successful!")
 
     {{-- pulls content from the partials --}}
     @section("content")
