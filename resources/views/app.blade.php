@@ -23,6 +23,11 @@
                 transform: all 0.5 ease-in;
             }
 
+            button {
+                margin: 2rem;
+                padding: 1rem;
+            }
+
             button:hover {
                 cursor: pointer;
             }
@@ -39,8 +44,10 @@
             .errors {
                 color: red;
             }
-            .full-height {
-                height: 100vh;
+
+            fieldset {
+                min-width: 50%;
+                padding: 0 25%;
             }
 
             .flex-center {
@@ -51,6 +58,10 @@
 
             .form-control {
                 color: red;
+            }
+
+            .full-height {
+                height: 100vh;
             }
 
             label {
@@ -66,7 +77,7 @@
             input {
                 margin: 2%;
                 border: 1px solid #ccc;
-                max-width: 50%;
+                max-width: 70%;
                 -moz-border-radius: 10px;
                 -webkit-border-radius: 10px;
                 border-radius: 10px;
