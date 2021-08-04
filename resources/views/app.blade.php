@@ -20,6 +20,7 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                transform: all 0.5 ease-in;
             }
 
             button:hover {
@@ -45,6 +46,9 @@
                 justify-content: center;
             }
 
+            .form-control {
+                color: red;
+            }
             h1 {
                 padding: 3rem;
             }
@@ -64,11 +68,17 @@
                 font-size: 110%;
             }
 
-
             td {
                 min-width: 150px;
                 min-height: 120px;
+                padding: 1%;
             }
+
+            td:hover {
+                color: indigo;
+                background: light;
+            }
+
             .top-right {
                 position: absolute;
                 right: 10px;

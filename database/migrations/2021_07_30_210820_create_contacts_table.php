@@ -24,10 +24,10 @@ class CreateContactsTable extends Migration
             $table->string('middle_name', 20)->nullable();
             $table->string('last_name', 20);
             $table->date('date_of_birth');
-            $table->string('address', 50);
+            $table->string('address', 50)->nullable();
             $table->string('city', 30);
             $table->string('postcode', 10);
-            $table->string('tel', 11);
+            $table->string('tel', 11)->nullable();
             $table->string('email',30)->unique();
             $table->boolean('active')->default(true);
             $table->timestamps();
