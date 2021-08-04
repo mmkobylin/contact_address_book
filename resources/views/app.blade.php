@@ -132,8 +132,11 @@
                 padding: 1%;
             }
 
+            tr:hover {
+
+            }
             td:hover {
-                color: indigo;
+                color: #ffa69e;
             }
 
             .top-right {
@@ -148,7 +151,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 2rem;
             }
 
             ul li {
