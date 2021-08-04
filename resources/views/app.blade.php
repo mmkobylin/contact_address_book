@@ -36,6 +36,9 @@
                 margin-right: 1rem;
             }
 
+            .errors {
+                color: red;
+            }
             .full-height {
                 height: 100vh;
             }

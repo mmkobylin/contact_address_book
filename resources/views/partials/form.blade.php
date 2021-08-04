@@ -98,3 +98,14 @@
     <button type = "submit" >Add Contact</button>
 </form>
 
+@if ( $errors->any()) 
+    <div class="errors">
+        @foreach ($errors->all() as $error) 
+
+            <li>
+                {{ $error }}
+            </li>
+            
+        @endforeach
+    </div>
+@endif

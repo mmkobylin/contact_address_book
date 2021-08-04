@@ -70,7 +70,7 @@ class Contacts extends Controller
             'address' => 'max:50',
             'city' => 'required | max:20',
             'postcode' => 'required | max:20',
-            'email' => 'required | max:20'
+            'email' => 'required | email:rfc,dns'
         ]);
 
 
