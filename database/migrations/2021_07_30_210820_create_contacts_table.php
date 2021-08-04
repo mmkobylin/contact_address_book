@@ -23,7 +23,7 @@ class CreateContactsTable extends Migration
             $table->string('first_name', 20);
             $table->string('middle_name', 20)->nullable();
             $table->string('last_name', 20);
-            $table->date('date_of_birth');
+            $table->date('date_of_birth')->nullable();
             $table->string('address', 50)->nullable();
             $table->string('city', 30);
             $table->string('postcode', 10);
