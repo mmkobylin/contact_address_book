@@ -12,10 +12,10 @@
     </div>
 @endif
 
+<p>Fields with * are required</p>
+
 
 <form action="add" method="POST">
-
-    <p>Fields with * are required</p>
 
     @csrf
     <fieldset>

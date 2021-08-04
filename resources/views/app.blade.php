@@ -13,24 +13,30 @@
         <!-- Styles -->
         <style>
             html, body {
+                
                 padding: 5% 3;
-                background-color: #FFF;
-                color: #636b6f;
+                background-color: #fff9ec;
+                color: #5d2a42;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-                transform: all 0.5s ease-in;
+                transition: all 1s ease-in-out;
+                text-align:center;
+            }
+
+            a:hover {
+                color: #5d2a42;
             }
 
             button {
-                background-color: #DDFFF7;
+                background-color: #ffdccc;
                 margin: 2rem;
                 padding: 1rem;
             }
 
             button:hover {
-                background-color: #93e1d8;
+                background-color: #fb6376;
                 cursor: pointer;
             }
 
@@ -45,7 +51,8 @@
             }
 
             .errors {
-                color: #720026;
+                color: #FB6376;
+                margin: 2rem;
             }
 
          
@@ -60,13 +67,20 @@
                 justify-content: center;
             }
 
+            form {
+                border: double 6px #144552;
+                max-width: 80%;
+                margin:0% 10%;
+                padding:1%;                
+            }
+            
             .form-control {
                 color: #720026;
             }
 
             .form-group {
                 margin: 2rem;
-                text-align:left;
+                text-align:center;
             }
 
             .full-height {
@@ -99,15 +113,10 @@
                 -webkit-appearance: none;
             }
 
-            select {
-                position: relative;
-                left: 0px;
-                border: 1px solid #ccc;
 
-            }
-            input:hover, input:active, input:focus, 
-            select:hover, select:active, select:focus, {
-                background-color: #DDFFF7;
+
+            input:hover, input:active, input:focus {
+                background-color: #ffdccc;
             }
 
             input:focus {
@@ -120,6 +129,19 @@
            
             .position-ref {
                 position: relative;
+            }
+
+
+            table {
+                border: double 6px #144552;
+
+            }
+
+            select {
+                position: relative;
+                left: 0px;
+                border: 1px solid #ccc;
+
             }
 
             table {
@@ -171,7 +193,7 @@
             ul li {
                 display:inline;
                 padding: 1rem;
-                transform: 0.7s all ease-in;
+                transition: 0.7s all ease-in;
             }
 
             ul li:hover {
