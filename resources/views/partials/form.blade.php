@@ -41,7 +41,6 @@
             <label for="date_of_birth">Date of Birth</label>
             <input id="date_of_birth" name="date_of_brith" type = "date" class="form-control" value="{{ old("address_2") }}" />
         </div>
-
         <div>
             <label for="city">City</label>
             <input id="city" name="city" class="form-control" value="{{ old("city") }}" />
@@ -56,7 +55,7 @@
             <label for="tel">Telephone</label>
             <input id="tel" name="tel" type = "integer" class="form-control" value="{{ old("tel") }}" />
         </div>
-        
+
         <div>
             <label for="email">Email</label>
             <input id="email" name="email" class="form-control" value="{{ old("email") }}" />

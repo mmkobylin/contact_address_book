@@ -20,15 +20,17 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-                transform: all 0.5 ease-in;
+                transform: all 0.5s ease-in;
             }
 
             button {
+                background-color: #DDFFF7;
                 margin: 2rem;
                 padding: 1rem;
             }
 
             button:hover {
+                background-color: #93e1d8;
                 cursor: pointer;
             }
 
@@ -43,7 +45,7 @@
             }
 
             .errors {
-                color: red;
+                color: #720026;
             }
 
          
@@ -59,7 +61,7 @@
             }
 
             .form-control {
-                color: red;
+                color: #720026;
             }
 
             .form-group {
@@ -97,14 +99,14 @@
                 -webkit-appearance: none;
             }
 
-            input:hover, input:active {
-                background-color: gray;
+            input:hover, input:active, input:focus {
+                background-color: #DDFFF7;
             }
 
-            input.rounded:focus {
+            input:focus {
                 border-color: #339933;
-                background-color: gray;
             }
+
             h1 {
                 padding: 3rem;
             }
@@ -132,7 +134,6 @@
 
             td:hover {
                 color: indigo;
-                background: light;
             }
 
             .top-right {
@@ -143,7 +144,7 @@
 
             .content {
                 text-align: center;
-                padding: 5rem;
+                padding: 1rem 5re            
             }
 
             .title {
@@ -153,8 +154,7 @@
             ul li {
                 display:inline;
                 padding: 1rem;
-                transform: 0.2s all ease-in;
-
+                transform: 0.7s all ease-in;
             }
 
             ul li:hover {
