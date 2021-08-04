@@ -27,7 +27,7 @@ Route::get('/add', [Contacts::class, 'create']);
 
 Route::post('/add', [Contacts::class, 'createContact']);
 
-Route::get('/delete/{id}', [Contacts::class, 'destroy']);
+Route::get('/delete/{id}', [Contacts::class, 'deactivate']);
 
 Route::get('/edit/{id}', [Contacts::class, 'showContact']);
 
