@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class Contacts extends Controller
 {
-    function show()
+    public function show()
     {
         $data = Contact::all();
         return view ( 'list', ['contacts' => $data ] );
@@ -19,7 +19,6 @@ class Contacts extends Controller
     {
         $data = Contact::where('active', true)
         ->get();
-
         return view ( 'list', ['contacts' => $data ] );
     }
 
@@ -74,7 +73,7 @@ class Contacts extends Controller
         return redirect("/");
     }
 
-    function store(Request $request)
+    public function store(Request $request)
     {
         $contact = new Contact;
         $contact->salutation=$request->salutation;
@@ -92,7 +91,7 @@ class Contacts extends Controller
         return view('list');
     }
 
-    function modify(Request $request)
+    public function modify(Request $request)
     {
         $data = Contact::find($request->id);
         $data->salutation=$request->salutation;
