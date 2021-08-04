@@ -15,13 +15,16 @@
 <form method="POST" action="add">
 
     @csrf
-    <fieldset class="form-group">
+    <fieldset>
+        <div>
             <label for="salutation">Salutation</label>
             <input id="salutation" name="salutation" class="form-control" value="{{ old("salutation") }}" />
-     
+        </div>
+        <div>
             <label for="first_name">First Name</label>
             <input id="first_name" name="first_name" class="form-control" value="{{ old("first_name") }}" />
-        <div >
+        </div>
+        <div>
             <label for="middle_name">Middle Name</label>
             <input id="middle_name" name="middle_name" class="form-control" value="{{ old("middle_name") }}"" />
         </div>
