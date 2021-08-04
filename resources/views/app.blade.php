@@ -13,12 +13,18 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                padding: 5% 3;
+                background-color: #FFF;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                transform: all 0.5 ease-in;
+            }
+
+            button:hover {
+                cursor: pointer;
             }
 
             .form-group {
@@ -40,8 +46,37 @@
                 justify-content: center;
             }
 
+            .form-control {
+                color: red;
+            }
+            h1 {
+                padding: 3rem;
+            }
+           
             .position-ref {
                 position: relative;
+            }
+
+            table {
+                border: double 5px black;
+                padding: 2rem;
+            }
+
+            tr:first-of-type {
+                background: cyan;
+                font-weight: bold;
+                font-size: 110%;
+            }
+
+            td {
+                min-width: 150px;
+                min-height: 120px;
+                padding: 1%;
+            }
+
+            td:hover {
+                color: indigo;
+                background: light;
             }
 
             .top-right {
@@ -52,6 +87,7 @@
 
             .content {
                 text-align: center;
+                padding: 5rem;
             }
 
             .title {
@@ -60,12 +96,20 @@
 
             ul li {
                 display:inline;
+                padding: 1rem;
+                transform: 0.2s all ease-in;
+
+            }
+
+            ul li:hover {
+                color: pink;
             }
 
             ul {
                 text-align: center;
-
+                padding: 5rem;
             }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
