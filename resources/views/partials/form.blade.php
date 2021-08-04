@@ -21,7 +21,12 @@
     <fieldset>
         <div>
             <label for="salutation">Salutation *</label>
-            <input id="salutation" name="salutation" class="form-control" value="{{ old("salutation") }}" />
+            <select name="salutation">
+                <option value="Miss">Miss</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Mx">Mx</option>
+                <option value="Mr">Mr</option>
+            </select>
         </div>
         <div>
             <label for="first_name">First Name *</label>
@@ -29,15 +34,15 @@
         </div>
         <div>
             <label for="middle_name">Middle Name</label>
-            <input id="middle_name" name="middle_name" class="form-control" value="{{ old("middle_name") }}"" />
+            <input id="middle_name" name="middle_name" class="form-control" value="{{ old("middle_name") }}" />
         </div>
         <div>
             <label for="last_name">Last Name *</label>
-            <input id="last_name" name="last_name" class="form-control" value="{{ old("last_name") }}"" />
+            <input id="last_name" name="last_name" class="form-control" value="{{ old("last_name") }}" />
         </div>
         <div>
             <label for="date_of_birth">Date of Birth</label>
-            <input id="date_of_birth" name="date_of_brith" type = "date" class="form-control" value="{{ old("address_2") }}" />
+            <input id="date_of_birth" name="date_of_brith" type = "date" class="form-control" value="{{ old("address") }}" />
         </div>
         <div>
             <label for="address">Address</label>

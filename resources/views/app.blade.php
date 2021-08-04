@@ -99,7 +99,14 @@
                 -webkit-appearance: none;
             }
 
-            input:hover, input:active, input:focus {
+            select {
+                position: relative;
+                left: 0px;
+                border: 1px solid #ccc;
+
+            }
+            input:hover, input:active, input:focus, 
+            select:hover, select:active, select:focus, {
                 background-color: #DDFFF7;
             }
 
