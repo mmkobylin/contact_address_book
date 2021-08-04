@@ -47,7 +47,7 @@ class Contacts extends Controller
 
         return view('success');
     }
-    
+
     public function showContact($id)
     {
         $data = Contact::find($id);
@@ -61,31 +61,31 @@ class Contacts extends Controller
 
     public function createContact(Request $request)
     {
-        $request->validate([
-            'salutation' => 'required | max:20', 
-            'first_name' => 'required | max:30', 
-            'middle_name' => 'max:30', 
-            'last_name' => 'required | max:30', 
-            'date_of_birth',
-            'address' => 'required | max:50', 
-            'city' => 'required | max:30', 
-            'postcode' => 'required | max:10', 
-            'tel' => 'max:11', 
-            'email' => 'required | max:20', 
-        ]);
+        // $request->validate([
+        //     'salutation' => 'required | max:20', 
+        //     'first_name' => 'required | max:30', 
+        //     'middle_name' => 'max:30', 
+        //     'last_name' => 'required | max:30', 
+        //     'date_of_birth',
+        //     'address' => 'required | max:50', 
+        //     'city' => 'required | max:30', 
+        //     'postcode' => 'required | max:10', 
+        //     'tel' => 'max:11 | integer', 
+        //     'email' => 'required | unique:contacts', 
+        // ]);
 
         // get all of the submitted data
         $data = Contact::create([
-        'salutation' => $request->input('salutation'),
-        'first_name' => $request->input('first_name'),
-        'middle_name' => $request->input('middle_name'),
-        'last_name' => $request->input('last_name'),
-        'date_of_birth' => $request->input('date_of_birth'),
-        'address' => $request->input('address'),
-        'city' => $request->input('city'),
-        'postcode' => $request->input('postcode'),
-        'tel' => $request->input('tel'),
-        'email' => $request->input('email')
+            'salutation' => $request->input('salutation'),
+            'first_name' => $request->input('first_name'),
+            'middle_name' => $request->input('middle_name'),
+            'last_name' => $request->input('last_name'),
+            'date_of_birth' => $request->input('date_of_birth'),
+            'address' => $request->input('address'),
+            'city' => $request->input('city'),
+            'postcode' => $request->input('postcode'),
+            'tel' => $request->input('tel'),
+            'email' => $request->input('email')
         ]);
 
         return view("success");

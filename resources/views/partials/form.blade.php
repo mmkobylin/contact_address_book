@@ -1,5 +1,5 @@
 {{-- action is where we are moving --}}
-<form method="POST"action="<?php 
+<form method="POST" action="<?php 
     echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
 >
 
@@ -96,5 +96,16 @@
         </div>
     </fieldset>
     <button type = "submit" >Add Contact</button>
-
 </form>
+
+@if ( $errors->any()) 
+    <div>
+        @foreach ($errors->all() as $error) 
+
+            <li>
+                {{ $error }}
+            </li>
+            
+        @endforeach
+    </div>
+@endif

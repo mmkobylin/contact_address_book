@@ -10,7 +10,7 @@
     <p>No contacts found</p>
 
     @else 
-        <table border='1'>
+        <table>
             <tr>
                 <td>ID</td>
                 <td>Salutation</td>
@@ -44,6 +44,11 @@
             </tr>
             @endforeach
         </table> 
+        
     @endif
+
+    {{-- link to display all contacts --}}
+    <a href={{"/all"}}>Show all</a>
+
 
 @endsection

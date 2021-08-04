@@ -21,6 +21,7 @@ Route::get('/', function () {
     return view('home');
 });
 
+// 1st part if route, second array: class and the method used;
 Route::get('/all', [Contacts::class, 'showAll']);
 
 Route::get('/list', [Contacts::class, 'showActive']);
@@ -29,7 +30,6 @@ Route::get('/add', [Contacts::class, 'create']);
 
 Route::post('/add', [Contacts::class, 'createContact']);
 
-// 1st part if route, second array: class and the method used;
 Route::get('/active/{id}', [Contacts::class, 'activate']);
 
 Route::get('/deactive/{id}', [Contacts::class, 'deactivate']);
