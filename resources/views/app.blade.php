@@ -51,8 +51,8 @@
                 min-width: 350px;
             }
 
-            label {
-                margin-top: 2.5%
+            .edit label {
+                top: 0.9rem;
             }
 
             .errors {
@@ -100,6 +100,8 @@
                 float: left;
                 width: 150px;
                 font-size: 120%;
+                position: relative;
+                top: 0.4rem;
             }
 
             input {
@@ -139,7 +141,8 @@
 
             table {
                 border: double 6px #144552;
-
+                width: 90%;
+                margin: 5%;
             }
 
             select {
@@ -147,11 +150,6 @@
                 left: 0px;
                 border: 1px solid #ccc;
 
-            }
-
-            table {
-                border: double 5px black;
-                padding: 2rem;
             }
 
             tr:first-of-type {
@@ -165,10 +163,13 @@
                 min-width: 150px;
                 min-height: 120px;
                 padding: 1%;
+                border: 1px solid #5D2A42;
+
             }
 
             tr:hover:not(tr:first-of-type) {
                 background-color: #ffa69e;
+                border: 1px solid #5D2A42;
             }
 
             td:hover {
