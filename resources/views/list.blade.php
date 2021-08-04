@@ -15,6 +15,7 @@
                 <td>ID</td>
                 <td>Salutation</td>
                 <td>Name</td>
+                <td>Date of Birth</td>
                 <td>Address</td>
                 <td>Email</td>
                 <td>Phone</td>
@@ -26,6 +27,7 @@
                 <td>{{$contact->id}}</td>
                 <td>{{$contact->salutation}}</td>
                 <td>{{$contact->fullName()}}</td>
+                <td>{{$contact->date_of_birth}}</td>
                 <td>{{$contact->fullAddress()}}</td>
                 <td>{{$contact->email}}</td>
                 <td>{{$contact->tel}}</td>

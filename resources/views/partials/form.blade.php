@@ -12,7 +12,7 @@
     </div>
 @endif
 
-<form method="POST" action="add">
+<form action="add" method="POST">
 
     @csrf
     <fieldset>
@@ -56,6 +56,7 @@
             <label for="tel">Telephone</label>
             <input id="tel" name="tel" type = "integer" class="form-control" value="{{ old("tel") }}" />
         </div>
+        
         <div>
             <label for="email">Email</label>
             <input id="email" name="email" class="form-control" value="{{ old("email") }}" />

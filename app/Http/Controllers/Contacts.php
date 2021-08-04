@@ -73,7 +73,6 @@ class Contacts extends Controller
             'email' => 'required | email:rfc,dns'
         ]);
 
-
         $data = Contact::create([
             'salutation' => $request->input('salutation'),
             'first_name' => $request->input('first_name'),
@@ -110,6 +109,20 @@ class Contacts extends Controller
 
     public function modify(Request $request)
     {
+
+        $request->validate([
+            'salutation' => 'required | max:20',
+            'first_name' => 'required | max:20',
+            'middle_name' => 'max:20',
+            'last_name' => 'required | max:20',
+            'address' => 'max:50',
+            'city' => 'required | max:20',
+            'postcode' => 'required | max:20',
+            'email' => 'required | email:rfc,dns'
+        ]);
+
+        // if passed validation:
+            
         $data = Contact::find($request->id);
         $data->salutation=$request->salutation;
         $data->first_name=$request->first_name;

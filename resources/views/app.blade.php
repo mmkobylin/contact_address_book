@@ -32,19 +32,21 @@
                 cursor: pointer;
             }
 
-            .form-group {
-                margin: 2rem;
-                text-align:left;
+            .edit input {
+                margin: 2%;
+                border: 1px solid #ccc;
+                min-width: 350px;
             }
 
             label {
-                margin-right: 1rem;
+                margin-top: 2.5%
             }
 
             .errors {
                 color: red;
             }
 
+         
             fieldset {
                 min-width: 50%;
                 padding: 0 25%;
@@ -58,6 +60,11 @@
 
             .form-control {
                 color: red;
+            }
+
+            .form-group {
+                margin: 2rem;
+                text-align:left;
             }
 
             .full-height {
@@ -88,6 +95,10 @@
                 padding: 4px 7px;
                 outline: 0;
                 -webkit-appearance: none;
+            }
+
+            input:hover, input:active {
+                background-color: gray;
             }
 
             input.rounded:focus {
