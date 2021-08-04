@@ -26,9 +26,9 @@ Route::get('/all', [Contacts::class, 'showAll']);
 
 Route::get('/list', [Contacts::class, 'showActive']);
 
-Route::get('/add', [Contacts::class, 'create']);
+Route::view('/add', 'form');
 
-Route::post('/add', [Contacts::class, 'createContact']);
+Route::post('add', [Contacts::class, 'createContact']);
 
 Route::get('/active/{id}', [Contacts::class, 'activate']);
 

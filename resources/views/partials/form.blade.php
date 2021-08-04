@@ -1,7 +1,5 @@
 {{-- action is where we are moving --}}
-<form method="POST" action="<?php 
-    echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"
->
+<form method="POST" action="add">
 
     @csrf
     <fieldset>
