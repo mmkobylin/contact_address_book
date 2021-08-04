@@ -150,6 +150,13 @@
                 padding: 1rem 5re            
             }
 
+            span {
+                text-align: right;
+                clear: both;
+                float: right;
+                width: 150px;
+            }
+
             .title {
                 font-size: 2rem;
             }
