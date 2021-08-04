@@ -21,6 +21,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/all', [Contacts::class, 'showAll']);
+
 Route::get('/list', [Contacts::class, 'showActive']);
 
 Route::get('/add', [Contacts::class, 'create']);
