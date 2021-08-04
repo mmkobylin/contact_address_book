@@ -49,7 +49,7 @@
             <input id="address" name="address" class="form-control" value="{{ old("address_1") }}" />
         </div>
         <div>
-            <label for="city">City</label>
+            <label for="city">City *</label>
             <input id="city" name="city" class="form-control" value="{{ old("city") }}" />
         </div>
 

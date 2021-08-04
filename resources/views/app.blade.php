@@ -25,6 +25,11 @@
                 text-align:center;
             }
 
+            a {
+                color: #247BA0;
+                font:bold;
+            }
+
             a:hover {
                 color: #5d2a42;
             }
@@ -120,7 +125,7 @@
             }
 
             input:focus {
-                border-color: #339933;
+                border-color: #FB6376;
             }
 
             h1 {
@@ -150,7 +155,8 @@
             }
 
             tr:first-of-type {
-                background: cyan;
+                background: #5D2A42;
+                color: #FFDCCC;
                 font-weight: bold;
                 font-size: 110%;
             }
@@ -161,11 +167,11 @@
                 padding: 1%;
             }
 
-            tr:hover {
-
+            tr:hover:not(tr:first-of-type) {
+                background-color: #ffa69e;
             }
+
             td:hover {
-                color: #ffa69e;
             }
 
             .top-right {

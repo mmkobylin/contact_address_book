@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Validator::extend('phone_number', function($attribute, $value, $parameters)
+        {
+            return substr($value, 0, 2) == '01';
+        });
     }
 }

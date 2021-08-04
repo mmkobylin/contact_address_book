@@ -118,11 +118,12 @@ class Contacts extends Controller
             'address' => 'max:50',
             'city' => 'required | max:20',
             'postcode' => 'required | max:20',
+            'tel' => 'numeric|phone_number|size:11',
             'email' => 'required | email:rfc,dns'
         ]);
 
         // if passed validation:
-            
+
         $data = Contact::find($request->id);
         $data->salutation=$request->salutation;
         $data->first_name=$request->first_name;
