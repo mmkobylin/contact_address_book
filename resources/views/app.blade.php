@@ -145,13 +145,8 @@
             }
 
             h1 {
-                padding: 5rem;
+                padding: 4rem;
             }
-           
-            .position-ref {
-                position: relative;
-            }
-
 
             table {
                 border: double 6px #144552;
