@@ -64,21 +64,16 @@
                 top: 0.9rem;
             }
 
-            .edit {
-                margin: 0 10%;
-                width: 80%;
-            }
-
             .errors {
                 color: #FB6376;
-                margin: 2rem;
+                margin: 1rem;
             }
 
          
             fieldset {
-                min-width: 50%;
-                padding: 0 15%;
                 text-align: left;
+                margin: 0 20%;
+                width: 60%;
             }
 
             .flex-center {

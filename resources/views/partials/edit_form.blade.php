@@ -21,7 +21,7 @@
         <div>
             <label for="salutation">Salutation</label>
             <input type="text" value = "{{ $data['salutation']}} " name="salutation">
-            <br>
+            
             <label for="first_name">First Name</label>
             <input type="text" value = "{{ $data['first_name']}} " name="first_name">
 
@@ -42,9 +42,7 @@
 
             <label for="postcode">Postcode</label>
             <input type="text" value = "{{ $data['postcode']}} " name="postcode">
-        </div>
-        
-        <div>
+
             <label for="tel">Telephone</label>
             <input type="text" value = "{{ $data['tel']}} " name="tel">
         </div>
