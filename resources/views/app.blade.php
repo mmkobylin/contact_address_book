@@ -64,16 +64,27 @@
                 top: 0.9rem;
             }
 
+            .edit {
+                padding: 0 25%;
+            }
+            .edit label {
+                text-align:right;
+            }
+
+            .edit input{
+                text-align: left;
+            }
+
             .errors {
                 color: #FB6376;
-                margin: 1rem;
+                margin: 2rem;
             }
 
          
             fieldset {
+                min-width: 50%;
+                padding: 0 15%;
                 text-align: left;
-                margin: 0 20%;
-                width: 60%;
             }
 
             .flex-center {
@@ -134,7 +145,7 @@
             }
 
             h1 {
-                padding: 3rem;
+                padding: 5rem;
             }
            
             .position-ref {
