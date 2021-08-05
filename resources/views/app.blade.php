@@ -14,7 +14,7 @@
         <style>
             html, body {
                 
-                padding: 5% 3;
+                padding: 5% 3%;
                 background-color: #fff9ec;
                 color: #5d2a42;
                 font-family: 'Nunito', sans-serif;
@@ -184,7 +184,7 @@
 
             .content {
                 text-align: center;
-                padding: 1rem 5re            
+                padding: 1rem 5rem;           
             }
 
             span {

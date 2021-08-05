@@ -7,6 +7,5 @@
 @section("content")
 
     @yield('partials/list')
-    @yield('partials/link_all')
 
 @endsection
