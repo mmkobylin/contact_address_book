@@ -8,17 +8,14 @@ use Illuminate\Http\Request;
 
 class Contacts extends Controller
 {
-    public function showContact($id)
-    {
-        $data = Contact::all();
-        return view('edit', ['data'=>$data]);
-    }
 
+    // view form
     public function create()
     {
         return view("form");
     }
 
+    // saving data
     public function createContact(Request $request)
     {
 
@@ -32,6 +29,8 @@ class Contacts extends Controller
             'postcode' => 'required | max:20',
             'email' => 'required | email:rfc,dns'
         ]);
+
+        // if passed validation
 
         $data = Contact::create([
             'salutation' => $request->input('salutation'),
@@ -49,11 +48,31 @@ class Contacts extends Controller
         return view("success");
     }
 
-    public function modify(Request $request, $id)
+    // fetch data to modify
+    public function showContact($id)
     {
-        $data = Contact::find($id);        
+        $data = Contact::find($id);
+        return view('edit', ['data'=>$data]);
+    }
 
-        $data->$request = $request->id;
+    // change data
+    public function modify(Request $request)
+    {
+
+        $request->validate([
+            'salutation' => 'required | max:20',
+            'first_name' => 'required | max:20',
+            'middle_name' => 'max:20',
+            'last_name' => 'required | max:20',
+            'address' => 'max:50',
+            'city' => 'required | max:20',
+            'postcode' => 'required | max:20',
+            'email' => 'required | email:rfc,dns'
+        ]);
+
+        // if passed validation:
+            
+        $data = Contact::find($request->id);
         $data->salutation=$request->salutation;
         $data->first_name=$request->first_name;
         $data->middle_name=$request->middle_name;
@@ -69,10 +88,11 @@ class Contacts extends Controller
         return view('success');
     }
 
+    // display
     public function showAll()
     {
         $data = Contact::all();
-        return view ( 'all', ['contacts' => $data ] );
+        return view ( 'list', ['contacts' => $data ] );
     }
 
     // displays active ones!

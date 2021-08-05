@@ -1,5 +1,3 @@
-{{-- action is where we are moving --}}
-
 @if ( $errors->any()) 
     <div class="errors">
         @foreach ($errors->all() as $error) 

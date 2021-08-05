@@ -6,9 +6,3 @@
     @section("content")
         @include ("partials/edit_form")
     @endsection
-
-        public function showContact($id)
-    {
-        $data = Contact::find($id);
-        return view('edit', ['data'=>$data]);
-    }

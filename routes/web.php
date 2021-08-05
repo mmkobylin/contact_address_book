@@ -21,7 +21,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-
 // creation
 Route::view('/add', 'form');
 
