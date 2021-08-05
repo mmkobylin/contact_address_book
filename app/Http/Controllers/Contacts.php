@@ -8,8 +8,6 @@ use Illuminate\Http\Request;
 
 class Contacts extends Controller
 {
-
-    
     public function showAll()
     {
         $data = Contact::all();
@@ -56,7 +54,59 @@ class Contacts extends Controller
         return view('edit', ['data'=>$data]);
     }
 
-    
+    public function create()
+    {
+        return view("form");
+    }
+
+    public function createContact(Request $request)
+    {
+
+        $request->validate([
+            'salutation' => 'required | max:20',
+            'first_name' => 'required | max:20',
+            'middle_name' => 'max:20',
+            'last_name' => 'required | max:20',
+            'address' => 'max:50',
+            'city' => 'required | max:20',
+            'postcode' => 'required | max:20',
+            'email' => 'required | email:rfc,dns'
+        ]);
+
+        $data = Contact::create([
+            'salutation' => $request->input('salutation'),
+            'first_name' => $request->input('first_name'),
+            'middle_name' => $request->input('middle_name'),
+            'last_name' => $request->input('last_name'),
+            'date_of_birth' => $request->input('date_of_birth'),
+            'address' => $request->input('address'),
+            'city' => $request->input('city'),
+            'postcode' => $request->input('postcode'),
+            'tel' => $request->input('tel'),
+            'email' => $request->input('email')
+        ]);
+
+        return view("success");
+    }
+
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+        'salutation' => 'required|string',
+        'first_name'=> 'required|string',
+        'middle_name'=> 'required|string',
+        'last_name'=> 'required|string',
+        'date_of_birth',
+        'address'=> 'required|string', 
+        'city'=> 'required|string',
+        'postcode' => 'required',
+        'tel' => 'max:11', 
+        'email'=> 'required|string' 
+        ]); 
+        
+        return view('success');
+    }
+
     public function modify(Request $request)
     {
 
