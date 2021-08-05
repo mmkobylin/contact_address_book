@@ -32,6 +32,7 @@ Route::get('/edit/{id}', [Contacts::class, 'showContact']);
 
 Route::post('/edit', [Contacts::class, 'modify']);
 
+
 // display
 // 1st part if route, second array: class and the method used;
 Route::get('/all', [Contacts::class, 'showAll']);

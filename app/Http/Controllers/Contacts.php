@@ -49,42 +49,11 @@ class Contacts extends Controller
         return view("success");
     }
 
-    public function store(Request $request)
+    public function modify(Request $request, $id)
     {
-        $this->validate($request, [
-        'salutation' => 'required|string',
-        'first_name'=> 'required|string',
-        'middle_name'=> 'required|string',
-        'last_name'=> 'required|string',
-        'date_of_birth',
-        'address'=> 'required|string', 
-        'city'=> 'required|string',
-        'postcode' => 'required',
-        'tel' => 'max:11', 
-        'email'=> 'required|string' 
-        ]); 
-        
-        return view('success');
-    }
+        $data = Contact::find($id);        
 
-    public function modify(Request $request)
-    {
-
-        $request->validate([
-            'salutation' => 'required | max:20',
-            'first_name' => 'required | max:20',
-            'middle_name' => 'max:20',
-            'last_name' => 'required | max:20',
-            'date_of_birth' => 'before:now',
-            'address' => 'max:50',
-            'city' => 'required | max:20',
-            'postcode' => 'required | max:20',
-            'email' => 'required | email:rfc,dns'
-        ]);
-
-        // if passed validation:
-
-        $data = Contact::find($request->id);
+        $data->$request = $request->id;
         $data->salutation=$request->salutation;
         $data->first_name=$request->first_name;
         $data->middle_name=$request->middle_name;
