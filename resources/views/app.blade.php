@@ -25,9 +25,14 @@
 
             a {
                 color: #247BA0;
+                cursor: pointer;
+
+            }
+
+            li a {
                 font:bold;
                 padding: 0 25px;
-                font-size: 16px;
+                font-size: 20px;
                 letter-spacing: .1rem;
             }
 
@@ -44,6 +49,7 @@
             }
 
             button:hover {
+                color: #5d2a42;
                 background-color: #fb6376;
                 cursor: pointer;
             }
@@ -158,6 +164,17 @@
 
             }
 
+            .success {
+                font: bold;
+                transform: scale(1.3);
+                color: #fb6376;
+                margin: 5rem;
+            }
+
+            h2 {
+                padding: 3rem;
+            }
+
             tr:first-of-type {
                 background: #5D2A42;
                 color: #FFDCCC;
@@ -166,11 +183,13 @@
             }
 
             td {
-                min-width: 150px;
+                min-width: 120px;
+                max-width: fit-content;
                 min-height: 120px;
                 padding: 1%;
                 border: 1px solid #5D2A42;
-
+                overflow: auto;
+                font-size: 16px;
             }
 
             tr:hover:not(tr:first-of-type) {
@@ -183,7 +202,7 @@
 
             .content {
                 text-align: center;
-                padding: 1rem 5rem;           
+                padding: 1rem 2rem;           
             }
 
             select {
@@ -201,10 +220,6 @@
                 display:inline;
                 padding: 1rem;
                 transition: 0.7s all ease-in;
-            }
-
-            ul li:hover {
-                color: pink;
             }
 
             ul {

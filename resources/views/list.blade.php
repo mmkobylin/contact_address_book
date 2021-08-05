@@ -8,5 +8,5 @@
 
     @include("partials/list")
     @include("partials/link_all")
-    
+
 @endsection

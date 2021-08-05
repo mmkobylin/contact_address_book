@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 // 1st part if route, second array: class and the method used;
-Route::view('/all', 'all');
+Route::get('/all', [Contacts::class, 'showAll']);
 
 Route::get('/list', [Contacts::class, 'showActive']);
 
