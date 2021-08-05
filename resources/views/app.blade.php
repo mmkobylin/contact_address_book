@@ -13,25 +13,45 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                padding: 5% 3;
+                background-color: #FFF;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                transform: all 0.5s ease-in;
             }
 
-            .form-group {
+            button {
+                background-color: #DDFFF7;
                 margin: 2rem;
-                text-align:left;
+                padding: 1rem;
+            }
+
+            button:hover {
+                background-color: #93e1d8;
+                cursor: pointer;
+            }
+
+            .edit input {
+                margin: 2%;
+                border: 1px solid #ccc;
+                min-width: 350px;
             }
 
             label {
-                margin-right: 1rem;
+                margin-top: 2.5%
             }
 
-            .full-height {
-                height: 100vh;
+            .errors {
+                color: #720026;
+            }
+
+         
+            fieldset {
+                min-width: 50%;
+                padding: 0 25%;
             }
 
             .flex-center {
@@ -40,8 +60,90 @@
                 justify-content: center;
             }
 
+            .form-control {
+                color: #720026;
+            }
+
+            .form-group {
+                margin: 2rem;
+                text-align:left;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            label {
+                margin: 0.5%;
+                font-weight: bold;
+                text-align: left;
+                clear: both;
+                float: left;
+                width: 150px;
+                font-size: 120%;
+            }
+
+            input {
+                margin: 2%;
+                border: 1px solid #ccc;
+                max-width: 70%;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                -moz-box-shadow: 2px 2px 3px #666;
+                -webkit-box-shadow: 2px 2px 3px #666;
+                box-shadow: 2px 2px 3px #666;
+                font-size: 20px;
+                padding: 4px 7px;
+                outline: 0;
+                -webkit-appearance: none;
+            }
+
+            select {
+                position: relative;
+                left: 0px;
+                border: 1px solid #ccc;
+
+            }
+            input:hover, input:active, input:focus, 
+            select:hover, select:active, select:focus, {
+                background-color: #DDFFF7;
+            }
+
+            input:focus {
+                border-color: #339933;
+            }
+
+            h1 {
+                padding: 3rem;
+            }
+           
             .position-ref {
                 position: relative;
+            }
+
+            table {
+                border: double 5px black;
+                padding: 2rem;
+            }
+
+            tr:first-of-type {
+                background: cyan;
+                font-weight: bold;
+                font-size: 110%;
+            }
+
+            td {
+                min-width: 150px;
+                min-height: 120px;
+                padding: 1%;
+            }
+
+            tr:hover {
+
+            }
+            td:hover {
+                color: #ffa69e;
             }
 
             .top-right {
@@ -52,20 +154,35 @@
 
             .content {
                 text-align: center;
+                padding: 1rem 5re            
+            }
+
+            span {
+                text-align: right;
+                clear: both;
+                float: right;
+                width: 150px;
             }
 
             .title {
-                font-size: 84px;
+                font-size: 2rem;
             }
 
             ul li {
                 display:inline;
+                padding: 1rem;
+                transform: 0.7s all ease-in;
+            }
+
+            ul li:hover {
+                color: pink;
             }
 
             ul {
                 text-align: center;
-
+                padding: 5rem;
             }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;

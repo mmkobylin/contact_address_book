@@ -21,16 +21,20 @@ Route::get('/', function () {
     return view('home');
 });
 
+// 1st part if route, second array: class and the method used;
+Route::get('/all', [Contacts::class, 'showAll']);
 
-Route::get('list', [Contacts::class, 'show']);
+Route::get('/list', [Contacts::class, 'showActive']);
 
-// with view : 1st is address, second is blade ) 
-Route::view('add', 'form');
+Route::view('/add', 'form');
 
-Route::post('add', [Contacts::class, 'create']);
+Route::post('add', [Contacts::class, 'createContact']);
 
-Route::get('delete/{id}', [Contacts::class, 'destroy']);
+Route::get('/active/{id}', [Contacts::class, 'activate']);
 
-Route::get('edit/{id}', [Contacts::class, 'showContact']);
+Route::get('/deactive/{id}', [Contacts::class, 'deactivate']);
 
-Route::post('edit', [Contacts::class, 'modify']);
+// pick up the id of the Contact and change it;
+Route::get('/edit/{id}', [Contacts::class, 'showContact']);
+
+Route::post('/edit', [Contacts::class, 'modify']);
