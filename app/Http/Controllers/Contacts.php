@@ -88,14 +88,14 @@ class Contacts extends Controller
         return view('success');
     }
 
-    // display
+    // display all
     public function showAll()
     {
         $data = Contact::all();
         return view ( 'list', ['contacts' => $data ] );
     }
 
-    // displays active ones!
+    // display active ones
     public function showActive() 
     {
         $data = Contact::where('active', true)
@@ -103,6 +103,7 @@ class Contacts extends Controller
         return view ( 'list', ['contacts' => $data ] );
     }
 
+    // change 'active' column -deactivate
     public function deactivate(Request $request, $id)
     {
         // find data
@@ -118,6 +119,7 @@ class Contacts extends Controller
         return view('success');
     }
 
+    // activate
     public function activate(Request $request, $id)
     {
         $data = Contact::find($id);        
