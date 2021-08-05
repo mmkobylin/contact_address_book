@@ -34,7 +34,7 @@
         <input type="text" value = "{{ $data['last_name']}} " name="last_name">
 
         <label for="date_of_birth">Date of Birth</label>
-        <input type="date" value = "{{ $data['date_of_birth']}} " name="date_of_birth">
+        <input type="date" value = "{{ $data['date_of_birth']}}" name="date_of_birth">
 
         <label for="address">Address</label>
         <input type="text" value = "{{ $data['address']}} " name="address">

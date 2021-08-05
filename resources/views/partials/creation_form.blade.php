@@ -1,3 +1,4 @@
+{{-- displaying errors --}}
 @if ( $errors->any()) 
     <div class="errors">
         @foreach ($errors->all() as $error) 
@@ -12,7 +13,7 @@
 
 <p>Fields with * are required</p>
 
-
+{{-- displaying form --}}
 <form action="add" method="POST">
 
     @csrf
