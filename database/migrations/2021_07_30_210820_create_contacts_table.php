@@ -24,20 +24,12 @@ class CreateContactsTable extends Migration
             $table->string('middle_name', 20)->nullable();
             $table->string('last_name', 20);
             $table->date('date_of_birth')->nullable();
-<<<<<<< HEAD
-            $table->string('address', 50);
-=======
             $table->string('address', 50)->nullable();
->>>>>>> feature/form-modification
             $table->string('city', 30);
             $table->string('postcode', 10);
             $table->string('tel', 11)->nullable();
             $table->string('email',30)->unique();
-<<<<<<< HEAD
-            $table->boolean('active')->default(true)->nullable();
-=======
             $table->boolean('active')->default(true);
->>>>>>> feature/form-modification
             $table->timestamps();
         });
     }

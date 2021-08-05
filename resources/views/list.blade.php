@@ -6,7 +6,7 @@
 {{-- pulls content from the partials --}}
 @section("content")
 
-    @include("partials/list")
+    @include("partials/list_display")
     @include("partials/link_all")
 
 @endsection

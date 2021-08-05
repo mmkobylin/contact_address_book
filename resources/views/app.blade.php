@@ -189,7 +189,7 @@
             }
 
             td {
-                min-width: 120px;
+                min-width: 130px;
                 max-width: fit-content;
                 min-height: 120px;
                 padding: 1%;

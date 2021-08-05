@@ -5,5 +5,5 @@
 
     {{-- pulls content from the partials --}}
     @section("content")
-        @include ("partials/form")
+        @include ("partials/creation_form")
     @endsection
