@@ -54,14 +54,19 @@
                 cursor: pointer;
             }
 
-            .edit input {
+            input {
                 margin: 2%;
                 border: 1px solid #ccc;
                 min-width: 350px;
             }
 
-            .edit label {
+            label {
                 top: 0.9rem;
+            }
+
+            .edit {
+                margin: 0 10%;
+                width: 80%;
             }
 
             .errors {
