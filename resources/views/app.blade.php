@@ -13,45 +13,78 @@
         <!-- Styles -->
         <style>
             html, body {
-                padding: 5% 3;
-                background-color: #FFF;
-                color: #636b6f;
+                background-color: #fff9ec;
+                color: #5d2a42;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-                transform: all 0.5s ease-in;
+                transition: all 1s ease-in-out;
+                text-align:center;
             }
 
+            a {
+                color: #247BA0;
+                cursor: pointer;
+
+            }
+
+            li a {
+                font:bold;
+                padding: 0 25px;
+                font-size: 20px;
+                letter-spacing: .1rem;
+            }
+
+            a:hover {
+                color: #5d2a42;
+                text-decoration: underline;
+            }
+
+    
             button {
-                background-color: #DDFFF7;
+                background-color: #ffdccc;
                 margin: 2rem;
                 padding: 1rem;
             }
 
             button:hover {
-                background-color: #93e1d8;
+                color: #5d2a42;
+                background-color: #fb6376;
                 cursor: pointer;
             }
 
-            .edit input {
+            input {
                 margin: 2%;
                 border: 1px solid #ccc;
                 min-width: 350px;
             }
 
             label {
-                margin-top: 2.5%
+                top: 0.9rem;
+            }
+
+            .edit {
+                padding: 0 25%;
+            }
+            .edit label {
+                text-align:right;
+            }
+
+            .edit input{
+                text-align: left;
             }
 
             .errors {
-                color: #720026;
+                color: #FB6376;
+                margin: 2rem;
             }
 
          
             fieldset {
                 min-width: 50%;
-                padding: 0 25%;
+                padding: 0 15%;
+                text-align: left;
             }
 
             .flex-center {
@@ -60,13 +93,20 @@
                 justify-content: center;
             }
 
+            form {
+                border: double 8px #144552;
+                max-width: 80%;
+                margin:0% 10%;
+                padding:3%;                
+            }
+            
             .form-control {
                 color: #720026;
             }
 
             .form-group {
                 margin: 2rem;
-                text-align:left;
+                text-align:center;
             }
 
             .full-height {
@@ -74,17 +114,22 @@
             }
 
             label {
-                margin: 0.5%;
+                margin: 2%;
                 font-weight: bold;
-                text-align: left;
+                text-align: right;
+                margin-right: 10px;
                 clear: both;
                 float: left;
                 width: 150px;
-                font-size: 120%;
+                font-size: 115%;
+                position: relative;
+                top: 0.25rem;
             }
-
+            
             input {
                 margin: 2%;
+                float: right;
+                border-radius: 20px;
                 border: 1px solid #ccc;
                 max-width: 70%;
                 -moz-border-radius: 10px;
@@ -99,83 +144,88 @@
                 -webkit-appearance: none;
             }
 
-            select {
-                position: relative;
-                left: 0px;
-                border: 1px solid #ccc;
-
-            }
-            input:hover, input:active, input:focus, 
-            select:hover, select:active, select:focus, {
-                background-color: #DDFFF7;
-            }
-
-            input:focus {
-                border-color: #339933;
-            }
-
             h1 {
-                padding: 3rem;
-            }
-           
-            .position-ref {
-                position: relative;
+                padding: 4rem;
             }
 
             table {
-                border: double 5px black;
-                padding: 2rem;
+                border: double 6px #144552;
+                width: 90%;
+                margin: 5%;
+            }
+
+            select {
+                border: 1px solid #ccc;
+                margin-left: 15px;
+                border-radius: 20px;
+                border: 1px solid #ccc;
+                max-width: 70%;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                -moz-box-shadow: 2px 2px 3px #666;
+                -webkit-box-shadow: 2px 2px 3px #666;
+                box-shadow: 2px 2px 3px #666;
+                font-size: 20px;
+
+            }
+
+            .success {
+                font: bold;
+                transform: scale(1.3);
+                color: #fb6376;
+                margin: 5rem;
+            }
+
+            h2 {
+                padding: 3rem;
             }
 
             tr:first-of-type {
-                background: cyan;
+                background: #5D2A42;
+                color: #FFDCCC;
                 font-weight: bold;
                 font-size: 110%;
             }
 
             td {
-                min-width: 150px;
+                min-width: 120px;
+                max-width: fit-content;
                 min-height: 120px;
                 padding: 1%;
+                border: 1px solid #5D2A42;
+                overflow: auto;
+                font-size: 16px;
             }
 
-            tr:hover {
-
+            tr:hover:not(tr:first-of-type) {
+                background-color: #ffa69e;
+                border: 1px solid #5D2A42;
             }
+
             td:hover {
-                color: #ffa69e;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
             }
 
             .content {
                 text-align: center;
-                padding: 1rem 5re            
+                padding: 1rem 2rem;           
             }
 
-            span {
-                text-align: right;
-                clear: both;
-                float: right;
-                width: 150px;
+            select {
+                position: relative;
+                top: 20px;
+                left: 30px;
             }
 
             .title {
-                font-size: 2rem;
+                font-size: 24px;
+                padding: 3rem;
             }
 
             ul li {
                 display:inline;
                 padding: 1rem;
-                transform: 0.7s all ease-in;
-            }
-
-            ul li:hover {
-                color: pink;
+                transition: 0.7s all ease-in;
             }
 
             ul {
@@ -183,19 +233,21 @@
                 padding: 5rem;
             }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            input:hover, input:active, input:focus {
+                background-color: #ffdccc;
+            }
+
+            input:focus, select:focus{
+                background-color: #ffdccc;
+            }
+
+
+            
+
         </style>
     </head>
     

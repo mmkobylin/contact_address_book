@@ -146,6 +146,7 @@ class Contacts extends Controller
             'first_name' => 'required | max:20',
             'middle_name' => 'max:20',
             'last_name' => 'required | max:20',
+            'date_of_birth' => 'before:now',
             'address' => 'max:50',
             'city' => 'required | max:20',
             'postcode' => 'required | max:20',
@@ -153,7 +154,7 @@ class Contacts extends Controller
         ]);
 
         // if passed validation:
-            
+
         $data = Contact::find($request->id);
         $data->salutation=$request->salutation;
         $data->first_name=$request->first_name;
