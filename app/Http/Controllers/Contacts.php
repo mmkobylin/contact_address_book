@@ -8,46 +8,6 @@ use Illuminate\Http\Request;
 
 class Contacts extends Controller
 {
-    public function showAll()
-    {
-        $data = Contact::all();
-        return view ( 'all', ['contacts' => $data ] );
-    }
-
-    // displays active ones!
-    public function showActive() 
-    {
-        $data = Contact::where('active', true)
-        ->get();
-        return view ( 'list', ['contacts' => $data ] );
-    }
-
-    public function deactivate(Request $request, $id)
-    {
-        // find data
-        $data = Contact::find($id);        
-
-        // change to false
-        $data->active = false;
-        
-        // save it
-        $data->save();
-
-        //return it
-        return view('success');
-    }
-
-    public function activate(Request $request, $id)
-    {
-        $data = Contact::find($id);        
-
-        $data->active = true;
-        
-        $data->save();
-
-        return view('success');
-    }
-
     public function showContact($id)
     {
         $data = Contact::all();
@@ -137,6 +97,46 @@ class Contacts extends Controller
         $data->email=$request->email;
         $data->save();
     
+        return view('success');
+    }
+
+    public function showAll()
+    {
+        $data = Contact::all();
+        return view ( 'all', ['contacts' => $data ] );
+    }
+
+    // displays active ones!
+    public function showActive() 
+    {
+        $data = Contact::where('active', true)
+        ->get();
+        return view ( 'list', ['contacts' => $data ] );
+    }
+
+    public function deactivate(Request $request, $id)
+    {
+        // find data
+        $data = Contact::find($id);        
+
+        // change to false
+        $data->active = false;
+        
+        // save it
+        $data->save();
+
+        //return it
+        return view('success');
+    }
+
+    public function activate(Request $request, $id)
+    {
+        $data = Contact::find($id);        
+
+        $data->active = true;
+        
+        $data->save();
+
         return view('success');
     }
 

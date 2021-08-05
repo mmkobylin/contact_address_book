@@ -1,6 +1,6 @@
 @extends("app")
 
-{{-- in section - we are naming section, and second varialbe is an actual name --}}
+{{-- in section - we are naming section, and second variable is an actual name --}}
 @section("title", "Active Contacts")
 
 {{-- pulls content from the partials --}}

@@ -16,25 +16,30 @@ use App\Http\Controllers\Contacts;
 */
 
 
-
+// home
 Route::get('/', function () {
     return view('home');
 });
 
-// 1st part if route, second array: class and the method used;
-Route::get('/all', [Contacts::class, 'showAll']);
 
-Route::get('/list', [Contacts::class, 'showActive']);
-
+// creation
 Route::view('/add', 'form');
 
 Route::post('add', [Contacts::class, 'createContact']);
-
-Route::get('/active/{id}', [Contacts::class, 'activate']);
-
-Route::get('/deactive/{id}', [Contacts::class, 'deactivate']);
 
 // pick up the id of the Contact and change it;
 Route::get('/edit/{id}', [Contacts::class, 'showContact']);
 
 Route::post('/edit', [Contacts::class, 'modify']);
+
+// display
+// 1st part if route, second array: class and the method used;
+Route::get('/all', [Contacts::class, 'showAll']);
+
+Route::get('/list', [Contacts::class, 'showActive']);
+
+// activation/ deactivation 
+Route::get('/active/{id}', [Contacts::class, 'activate']);
+
+Route::get('/deactive/{id}', [Contacts::class, 'deactivate']);
+
