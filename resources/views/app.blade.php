@@ -103,9 +103,10 @@
                 position: relative;
                 top: 0.4rem;
             }
-
+            
             input {
                 margin: 2%;
+                border-radius: 20px;
                 border: 1px solid #ccc;
                 max-width: 70%;
                 -moz-border-radius: 10px;

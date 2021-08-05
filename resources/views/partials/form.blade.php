@@ -42,7 +42,7 @@
         </div>
         <div>
             <label for="date_of_birth">Date of Birth</label>
-            <input id="date_of_birth" name="date_of_brith" type = "date" class="form-control" value="{{ old("address") }}" />
+            <input id="date_of_birth" name="date_of_birth" type = "date" class="form-control" value="{{ old("address") }}" />
         </div>
         <div>
             <label for="address">Address</label>
