@@ -6,5 +6,4 @@
     {{-- pulls content from the partials --}}
     @section("content")
         @include ("partials/form")
-        {{-- @include("partials/list") --}}
     @endsection

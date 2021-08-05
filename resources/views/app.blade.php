@@ -13,8 +13,6 @@
         <!-- Styles -->
         <style>
             html, body {
-                
-                padding: 5% 3%;
                 background-color: #fff9ec;
                 color: #5d2a42;
                 font-family: 'Nunito', sans-serif;
@@ -28,12 +26,17 @@
             a {
                 color: #247BA0;
                 font:bold;
+                padding: 0 25px;
+                font-size: 16px;
+                letter-spacing: .1rem;
             }
 
             a:hover {
                 color: #5d2a42;
+                text-decoration: underline;
             }
 
+    
             button {
                 background-color: #ffdccc;
                 margin: 2rem;
@@ -63,7 +66,8 @@
          
             fieldset {
                 min-width: 50%;
-                padding: 0 25%;
+                padding: 0 15%;
+                text-align: left;
             }
 
             .flex-center {
@@ -73,10 +77,10 @@
             }
 
             form {
-                border: double 6px #144552;
+                border: double 8px #144552;
                 max-width: 80%;
                 margin:0% 10%;
-                padding:1%;                
+                padding:3%;                
             }
             
             .form-control {
@@ -93,19 +97,21 @@
             }
 
             label {
-                margin: 0.5%;
+                margin: 2%;
                 font-weight: bold;
-                text-align: left;
+                text-align: right;
+                margin-right: 10px;
                 clear: both;
                 float: left;
                 width: 150px;
-                font-size: 120%;
+                font-size: 115%;
                 position: relative;
-                top: 0.4rem;
+                top: 0.25rem;
             }
             
             input {
                 margin: 2%;
+                float: right;
                 border-radius: 20px;
                 border: 1px solid #ccc;
                 max-width: 70%;
@@ -119,16 +125,6 @@
                 padding: 4px 7px;
                 outline: 0;
                 -webkit-appearance: none;
-            }
-
-
-
-            input:hover, input:active, input:focus {
-                background-color: #ffdccc;
-            }
-
-            input:focus {
-                border-color: #FB6376;
             }
 
             h1 {
@@ -147,9 +143,18 @@
             }
 
             select {
-                position: relative;
-                left: 0px;
                 border: 1px solid #ccc;
+                margin-left: 15px;
+                border-radius: 20px;
+                border: 1px solid #ccc;
+                max-width: 70%;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                -moz-box-shadow: 2px 2px 3px #666;
+                -webkit-box-shadow: 2px 2px 3px #666;
+                box-shadow: 2px 2px 3px #666;
+                font-size: 20px;
 
             }
 
@@ -176,26 +181,20 @@
             td:hover {
             }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
             .content {
                 text-align: center;
                 padding: 1rem 5rem;           
             }
 
-            span {
-                text-align: right;
-                clear: both;
-                float: right;
-                width: 150px;
+            select {
+                position: relative;
+                top: 20px;
+                left: 30px;
             }
 
             .title {
-                font-size: 2rem;
+                font-size: 24px;
+                padding: 3rem;
             }
 
             ul li {
@@ -213,19 +212,21 @@
                 padding: 5rem;
             }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            input:hover, input:active, input:focus {
+                background-color: #ffdccc;
+            }
+
+            input:focus, select:focus{
+                background-color: #ffdccc;
+            }
+
+
+            
+
         </style>
     </head>
     

@@ -115,10 +115,11 @@ class Contacts extends Controller
             'first_name' => 'required | max:20',
             'middle_name' => 'max:20',
             'last_name' => 'required | max:20',
+            'date_of_birth' => 'max: 8',
             'address' => 'max:50',
             'city' => 'required | max:20',
             'postcode' => 'required | max:20',
-            'tel' => 'numeric',
+            'tel' => 'numeric | max: 10',
             'email' => 'required | email:rfc,dns'
         ]);
 

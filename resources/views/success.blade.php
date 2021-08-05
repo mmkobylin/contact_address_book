@@ -5,5 +5,5 @@
 
     {{-- pulls content from the partials --}}
     @section("content")
-        <p>Thank you for using out Contact Book</p>
+        <p>Thank you for using our Contact Book!</p>
     @endsection
