@@ -92,7 +92,7 @@ class Contacts extends Controller
     public function showAll()
     {
         $data = Contact::all();
-        return view ( 'list', ['contacts' => $data ] );
+        return view ( 'all', ['contacts' => $data ] );
     }
 
     // display active ones
