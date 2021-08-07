@@ -14,7 +14,7 @@
 <p>Fields with * are required</p>
 
 {{-- displaying form --}}
-<form action="add" method="POST">
+<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
     @csrf
     <fieldset>
