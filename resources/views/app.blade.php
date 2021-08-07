@@ -203,6 +203,16 @@
                 border: 1px solid #5D2A42;
             }
 
+            tr a {
+                color: #5D2A42;
+            }
+            
+            tr:hover:not(tr:first-of-type) a {
+                font: bold;
+                color: #FFF;
+            }
+
+
             td:hover {
             }
 
