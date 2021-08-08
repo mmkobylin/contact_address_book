@@ -37,3 +37,9 @@ Route::get('/deactive/{id}', [Contacts::class, 'deactivate']);
 Route::get('/edit/{id}', [Contacts::class, 'showContact']);
 
 Route::post('/edit', [Contacts::class, 'modify']);
+
+// pick up the id of the Contact and delete it;
+Route::get('/delete/{id}', [Contacts::class, 'showAll']);
+
+Route::post('/delete', [Contacts::class, 'delete']);
+
